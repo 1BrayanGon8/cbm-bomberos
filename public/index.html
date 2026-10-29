@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bomberos Voluntarios · Facatativá, Cundinamarca</title>
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="login" class="login" hidden>
+    <section class="login-portada" aria-label="Bomberos de Facatativá en desfile">
+      <div>
+        <img class="logo" src="img/logo.png" alt="Escudo de los Bomberos Voluntarios de Facatativá">
+        <h2>BOMBEROS<span>Facatativá · Cundinamarca</span></h2>
+        <p>Sistema de gestión de la estación: inventarios, flota, turnos y atención de emergencias.</p>
+      </div>
+    </section>
+    <section class="login-panel">
+      <form id="form-login" class="login-card">
+        <div class="marca"><img class="logo" src="img/logo.png" alt="Escudo de los Bomberos Voluntarios de Facatativá"><div><strong>BOMBEROS</strong><small>Facatativá · Cundinamarca</small></div></div>
+        <h1>Iniciar sesión</h1>
+        <label>Usuario<input name="usuario" autocomplete="username" required autofocus></label>
+        <label>Contraseña<input name="password" type="password" autocomplete="current-password" required></label>
+        <p id="login-error" class="error" role="alert"></p>
+        <button class="btn primario" type="submit">Entrar</button>
+      </form>
+      <a class="login-publico" href="buscar.html">
+        <strong>¿Buscas a una persona tras una emergencia?</strong>
+        <small>Entra aquí sin usuario: reporta a quien no encuentras y mira si los bomberos ya lo ubicaron.</small>
+      </a>
+    </section>
+  </main>
+
+  <div id="app" class="app" hidden>
+    <aside class="lateral">
+      <div class="marca"><img class="logo" src="img/logo.png" alt="Escudo de los Bomberos Voluntarios de Facatativá"><div><strong>BOMBEROS</strong><small>Facatativá · Cundinamarca</small></div></div>
+      <nav id="menu" aria-label="Módulos"></nav>
+      <div class="servidor"><span id="punto-servidor" class="punto"></span><div><strong id="texto-servidor">Comprobando servidor…</strong><small id="copia-servidor"></small></div></div>
+    </aside>
+    <section class="contenido">
+      <header class="encabezado">
+        <div><h2 id="titulo">—</h2><p id="subtitulo"></p></div>
+        <div class="sesion">
+          <span id="turno" class="chip verde"></span>
+          <div class="quien"><strong id="nombre"></strong><small id="rol"></small></div>
+          <button id="asistencia" class="btn primario" hidden></button>
+          <button id="salir" class="btn">Salir</button>
+        </div>
+      </header>
+      <div id="vista"></div>
+    </section>
+  </div>
+  <script src="combo.js"></script>
+  <script src="inventarios.js"></script>
+  <script src="mantenimientos.js"></script>
+  <script src="dashboard.js"></script>
+  <script src="prestamos.js"></script>
+  <script src="entregas.js"></script>
+  <script src="vias.js"></script>
+  <script src="mapa-eventos.js"></script>
+  <script src="desaparecidos.js"></script>
+  <script src="analitica.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

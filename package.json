@@ -1,0 +1,29 @@
+{
+  "name": "cbm-bomberos",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Sistema de gestión para CBM Bomberos Facatativá-Cundinamarca",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "db:init": "node scripts/init-db.js",
+    "db:demo": "node scripts/demo-inventario.js",
+    "db:demo-flota": "node scripts/demo-flota.js",
+    "db:demo-desaparecidos": "node scripts/demo-desaparecidos.js",
+    "db:demo-analitica": "node scripts/demo-analitica.js",
+    "db:demo-vias": "node scripts/demo-vias.js",
+    "db:inventario-real": "node scripts/inventario-real.js",
+    "db:demo-busqueda": "node scripts/demo-busqueda.js",
+    "mapa:descargar": "node scripts/descargar-mapa.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.5",
+    "exceljs": "^4.4.0",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.11.0",
+    "pdfkit": "^0.15.0"
+  }
+}

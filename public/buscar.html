@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Buscar personas tras una emergencia · Bomberos Facatativá</title>
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="buscar.css">
+</head>
+<body class="publico">
+  <header class="pub-hero">
+    <div class="pub-hero-in">
+      <a class="pub-volver" href="index.html">Acceso para bomberos →</a>
+      <div class="marca"><img class="logo" src="img/logo.png" alt="Escudo de los Bomberos Voluntarios de Facatativá"><div><strong>BOMBEROS</strong><small>Facatativá · Cundinamarca</small></div></div>
+      <h1>¿Buscas a alguien tras una emergencia?</h1>
+      <p>Toca en el mapa la zona afectada, cuéntanos de la persona y mira si los bomberos ya la ubicaron. No necesitas crear una cuenta.</p>
+      <p class="pub-urgente">Si hay una emergencia en este momento, llama a la línea <strong>123</strong>.</p>
+    </div>
+  </header>
+
+  <main class="pub-main">
+    <ol class="pub-pasos">
+      <li><b>1</b><span>Toca en el mapa la zona roja donde ocurrió el evento.</span></li>
+      <li><b>2</b><span>Escribe los datos de la persona y cómo contactarte.</span></li>
+      <li><b>3</b><span>Revisa si los bomberos ya ubicaron a alguien parecido.</span></li>
+    </ol>
+
+    <section class="pub-mapa">
+      <div class="pub-mapa-cab">
+        <h2>Zonas afectadas</h2>
+        <span id="pub-estado" class="chip">Cargando…</span>
+      </div>
+      <div id="pub-mapa"></div>
+      <small>Pasa el cursor (o toca) una zona roja para ver qué ocurrió. Solo se puede reportar dentro de una zona marcada por los bomberos. Arrastra para moverte y usa + / − para acercar.</small>
+      <ul id="pub-lista" class="pub-lista"></ul>
+    </section>
+
+    <section class="panel pub-consulta">
+      <h2>¿Ya enviaste un reporte?</h2>
+      <p>Escribe tu código de seguimiento para ver si los bomberos publicaron a alguien parecido.</p>
+      <form id="form-consulta" class="fila-acciones">
+        <input name="codigo" placeholder="DES-XXXXXX" maxlength="12" required aria-label="Código de seguimiento" style="text-transform:uppercase;flex:1 1 200px">
+        <button class="btn primario" type="submit">Consultar</button>
+      </form>
+      <div id="pub-consulta-res"></div>
+    </section>
+  </main>
+
+  <dialog id="dlg" class="pub-dialogo"></dialog>
+
+  <footer class="pub-pie"><small>Bomberos Facatativá · Cundinamarca. Los datos que envías se usan solo para atender esta emergencia.</small></footer>
+  <script src="mapa-eventos.js"></script>
+  <script src="buscar.js"></script>
+</body>
+</html>
